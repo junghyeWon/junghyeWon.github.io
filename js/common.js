@@ -1,12 +1,12 @@
 $(function(){
 	$('#container').fullpage({
+		scrollBar: true,
 		scrollOverflow: true
 	});
 
 	$('#filters a').on( 'click', function() {
 		var filterValue = $( this ).attr('data-filter');
 		$grid.isotope({ filter: filterValue });
-
 		$grid.imagesLoaded().progress(function() {
 			$grid.isotope('layout');
 		});
@@ -28,20 +28,18 @@ $(function(){
 	});
 
 	$grid.isotope('shuffle');
-
 	// layout Masonry after each image loads
 	$grid.imagesLoaded().progress(function() {
 		$grid.isotope('layout');
 	});
 
-	/*
 	function chart() {
 		// skills chart
 		$(document).ready(function(e) {
 			var index=0;
 			$(document).scroll(function(){
 				var top = $('#skill').height()-$(window).scrollTop();
-				//console.log(top)
+				console.log(top);
 				if(top<-150){
 					if(index==0){
 						$('.chart').easyPieChart({
@@ -61,5 +59,4 @@ $(function(){
 		});
 	}
 	chart();
-	*/
 })
