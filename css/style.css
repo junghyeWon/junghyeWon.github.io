@@ -3,6 +3,8 @@
 /* main css */
 label, input, select{vertical-align:middle;}
 
+body{overflow-x:hidden !important;}
+
 /* ========== 01. header ========== */
 #header{z-index:50}
 #header h1 a{display:inline-block; background:url('../images/logo.png') no-repeat 0 50%; background-size:23px 27px; padding-left:30px; color:#333;}
@@ -30,6 +32,7 @@ label, input, select{vertical-align:middle;}
 #container #intro .intro_txt h1 span:nth-of-type(10){animation-delay:2.8s; -webkit-animation-delay:2.8s; -moz-animation-delay:2.8s;}
 #container #intro .intro_txt h1 span:nth-of-type(11){animation-delay:3.0s; -webkit-animation-delay:3.0s; -moz-animation-delay:3.0s;}
 #container #intro .intro_txt h1 span:nth-of-type(12){animation-delay:3.2s; -webkit-animation-delay:3.2s; -moz-animation-delay:3.2s;}
+
 #container #intro .intro_txt div span{display:block; font-family:'Poiret One', cursive; font-size:1.0rem; animation:color 3s 0.5s infinite alternate; color:#cfcfcf}
 
 @keyframes introTxt{
@@ -88,18 +91,31 @@ label, input, select{vertical-align:middle;}
 #container #intro .scroll-btn .mouse{position: relative; display: block; width: 35px; height: 55px; margin: 0 auto 20px; box-sizing: border-box; border: 3px solid #333; border-radius: 23px;}
 #container #intro .scroll-btn .mouse > *{position: absolute; display: block; top: 29%; left: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; background: #333; border-radius: 50%; -webkit-animation: ani-mouse 2.5s linear infinite; -moz-animation: ani-mouse 2.5s linear infinite; animation: ani-mouse 2.5s linear infinite;}
 
-#container #work{position:relative;}
+#container #work{position:relative; box-sizing:border-box; padding:100px 20px 0 20px}
 #container #work .grid-sizer,#container #work .grid-item{width:20%; box-sizing:border-box;}
 #container #work .grid-item a{display:block;}
 #container #work .grid-sizer a img,#container #work  .grid-item a img{width:100%;}
 #container #work .button-group{padding-bottom:20px;}
 
-#container #work ul#filters{padding:100px 0 20px 0; text-align:center;}
+#container #skills{border:1px solid red; }
+#container #skills #skill{font-size:0}
+#container #skills #skill .skill {display:inline-block; text-align:center; width:25%}
+#container #skills #skill .skill h4 {color: #333; font-size:22px; font-family:'Cardo';}
+#container #skills #skill .skill .chart {position: relative; display: inline-block; margin-bottom:26px; text-align: center; width:152px; height:152px;}
+#container #skills #skill .skill .chart canvas {position: absolute; top: 0; left: 0; width:152px; height:152px;}
+#container #skills #skill .skill .percent {display: inline-block; color: #121d1f; z-index: 2; line-height: 152px; font-size: 21px; font-family:'Poiret One';}
+#container #skills #skill .skill .percent:after {content: '%'; margin-left: 0.1em; font-size: .8em;}
+
+#container #work ul#filters{padding:0 0 20px 0; text-align:center;}
 #container #work ul#filters li{display:inline-block; }
 #container #work ul#filters li:after{content:"|"; padding:0 20px}
 #container #work ul#filters li:last-child:after{content:""}
-#container #work ul#filters a{color:#222; font-size:15px;}
+#container #work ul#filters a{color:#222; font-size:20px; font-family:'Cardo';}
 #container #work ul#filters a.current{color:#f18430;}
+
+.iScrollLoneScrollbar{display:none;}
+
+#footer{background:orange;}
 
 /* ========== 04. fullpage ========== */
 .fp-section.fp-table, .fp-slide.fp-table{display: table; table-layout:fixed; width: 100%;}
@@ -124,11 +140,17 @@ label, input, select{vertical-align:middle;}
 	#container #intro .scroll-btn .mouse > *{width:4px; height:5px; margin:-4px 0 0 -2px;}
 	#container #intro .scroll-btn p{margin-left:-60px}
 
+	#container #skills #skill .skill{width:50%}
 	#container #work .grid-sizer,#container #work .grid-item{width:25%;}
 }
 
 @media all and (max-width:736px){
 	#container #work .grid-sizer,#container #work .grid-item{width:33.333%;}
+
+	#container #skills #skill .skill .chart {width:110px; height:110px;}
+	#container #skills #skill .skill .chart .percent {line-height:110px;}
+	#container #skills #skill .skill .chart canvas{width:110px; height:110px;}
+
 }
 
 @media all and (max-width:480px){
@@ -138,4 +160,8 @@ label, input, select{vertical-align:middle;}
 	#container #intro .scroll-btn .mouse{width:22px; height:35px; margin: 0 auto 20px;}
 	#container #intro .scroll-btn .mouse > *{width:2px; height:3px; margin:-2px 0 0 -1px;}
 	#container #intro .scroll-btn p{display:none;}
+
+	#container #skills #skill .skill .chart {width:72px; height:72px;}
+	#container #skills #skill .skill .chart .percent {line-height:72px; font-size: 14px;}
+	#container #skills #skill .skill .chart canvas{width:72px; height:72px;}
 }
