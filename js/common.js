@@ -1,7 +1,6 @@
 $(function(){
 	$('#container').fullpage({
-		loopTop: true,
-		loopBottom: true
+		scrollOverflow: true
 	});
 
 	$('#filters a').on( 'click', function() {
