@@ -180,6 +180,9 @@ label, input, select{vertical-align:middle;}
 	#container #skills #skill .skill h4{font-size:14px;}
 
 	#container #work ul li{width:100%;}
+	#container #work ul li img{display:none;}
+	/*
 	#container #work ul li a{display:inline-block; width:90%; margin:0 auto; position:relative;}
 	#container #work ul li a span{font-size:15px; position:absolute; bottom:0; right:0; margin-top:-20px;}
+	*/
 }
