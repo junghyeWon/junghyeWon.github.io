@@ -177,6 +177,6 @@ label, input, select{vertical-align:middle;}
 	#container #skills #skill .skill h4{font-size:14px;}
 
 	#container #work ul li{width:100%;}
-	#container #work ul li a{display:block; width:90%; margin:0 auto;}
+	#container #work ul li a{display:inline-block; width:90%; margin:0 auto;}
 	#container #work ul li a span{font-size:15px;}
 }
