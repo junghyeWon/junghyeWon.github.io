@@ -152,6 +152,9 @@ label, input, select{vertical-align:middle;}
 	#container #skills #skill .skill{width:50%}
 	#container #skills #skill .skill:nth-of-type(1),#container #skills #skill .skill:nth-of-type(2){margin-bottom:50px;}
 	/*#container #work .grid-sizer,#container #work .grid-item{width:25%;}*/
+
+	#container #work ul li{width:50%;}
+	#container #work ul li:last-child{padding-top:30px;}
 }
 
 @media all and (max-width:736px){
@@ -177,6 +180,6 @@ label, input, select{vertical-align:middle;}
 	#container #skills #skill .skill h4{font-size:14px;}
 
 	#container #work ul li{width:100%;}
-	#container #work ul li a{display:inline-block; width:90%; margin:0 auto;}
-	#container #work ul li a span{font-size:15px;}
+	#container #work ul li a{display:inline-block; width:90%; margin:0 auto; position:relative;}
+	#container #work ul li a span{font-size:15px; position:absolute; bottom:0; right:0; margin-top:-20px;}
 }
