@@ -8,12 +8,12 @@ label, input, select{vertical-align:middle;}
 /* ========== 01. header ========== */
 #header{z-index:50}
 #header h1 a{display:inline-block; background:url('../images/logo.png') no-repeat 0 50%; background-size:23px 27px; padding-left:30px; color:#333;}
-#header .btn_nav{text-indent:-99999px; line-height:36px; width:22px; display:inline-block; background:url('../images/menu.png') no-repeat 100% 50%; position:absolute; top:20px; right:20px;}
 
 /* ========== 02. layout ========== */
 .m_show{display:none;}
 
 #header{width:100%; position:fixed; top:0; left:0; box-sizing:border-box; padding:20px;}
+#footer{width:100%; position:fixed; bottom:0; left:0; box-sizing:border-box; text-align:center; background:#333; padding:10px 0; color:#fff; font-family:'Poiret One', cursive}
 
 #container{width:100%;}
 #container #intro{text-align:center; position:relative;}
@@ -38,52 +38,43 @@ label, input, select{vertical-align:middle;}
 @keyframes introTxt{
 	0%{transform: rotateX(0deg);}
 	50%{transform: rotateX(180deg);}
-	100%{transform: rotateX(360deg);}
-}
+	100%{transform: rotateX(360deg);}}
 @-webkit-keyframes introTxt{
 	0%{transform: rotateX(0deg);}
 	50%{transform: rotateX(180deg);}
-	100%{transform: rotateX(360deg);}
-}
+	100%{transform: rotateX(360deg);}}
 @-moz-keyframes introTxt{
 	0%{transform: rotateX(0deg);}
 	50%{transform: rotateX(180deg);}
-	100%{transform: rotateX(360deg);}
-}
+	100%{transform: rotateX(360deg);}}
 
 @keyframes color{
 	from{color:#cfcfcf}
-	to{color:#333}
-}
+	to{color:#333}}
 @-webkit-keyframes color{
 	from{color:#cfcfcf}
-	to{color:#333}
-}
+	to{color:#333}}
 @-moz-keyframes color{
 	from{color:#cfcfcf}
-	to{color:#333}
-}
+	to{color:#333}}
 
 @keyframes ani-mouse{
 	0%{opacity: 1; top: 29%;}
 	15%{opacity: 1; top: 50%;}
 	50%{opacity: 0; top: 50%;}
-	100%{opacity: 0; top: 29%;}
-}
+	100%{opacity: 0; top: 29%;}}
 @-webkit-keyframes ani-mouse{
 	0%{opacity: 1; top: 29%;}
 	15%{opacity: 1; top: 50%;}
 	50%{opacity: 0; top: 50%;}
-	100%{opacity: 0; top: 29%;}
-}
+	100%{opacity: 0; top: 29%;}}
 @-moz-keyframes ani-mouse{
 	0%{opacity: 1; top: 29%;}
 	15%{opacity: 1; top: 50%;}
 	50%{opacity: 0; top: 50%;}
-	100%{opacity: 0; top: 29%;}
-}
+	100%{opacity: 0; top: 29%;}}
 
-#container #intro .scroll-btn{display: block; position: absolute; left:0; bottom:50px; width:100%; text-align: center;}
+#container #intro .scroll-btn{display: block; position: absolute; left:0; bottom:70px; width:100%; text-align: center;}
 #container #intro .scroll-btn p{margin-left:-65px;}
 #container #intro .scroll-btn > *{display: inline-block; line-height: 18px; font-size: 13px; font-weight: normal; color: #7f8c8d; color: #333; font-family: 'Poiret One', cursive; letter-spacing: 2px;}
 #container #intro .scroll-btn > *:hover,.scroll-btn > *:focus, .scroll-btn > *.active{color: #333;}
@@ -101,7 +92,7 @@ label, input, select{vertical-align:middle;}
 
 #container #skills{}
 #container #skills #skill{font-size:0}
-#container #skills #skill .skill {display:inline-block; text-align:center; width:25%}
+#container #skills #skill .skill{display:inline-block; text-align:center; width:25%}
 #container #skills #skill .skill h4{color: #333; font-size:22px; font-family:'Cardo';}
 #container #skills #skill .skill .chart{position: relative; display: inline-block; margin-bottom:26px; text-align: center; width:152px; height:152px;}
 #container #skills #skill .skill .chart canvas{position: absolute; top: 0; left: 0; width:152px; height:152px;}
@@ -124,13 +115,23 @@ label, input, select{vertical-align:middle;}
 #container #work ul li a img{width:100%}
 #container #work ul li a span{color: #333; font-size:22px; font-family:'Cardo';}
 
-#footer{background:orange;}
+#container #contact{background:orange;}
 
 /* ========== 04. fullpage ========== */
 .fp-section.fp-table, .fp-slide.fp-table{display: table; table-layout:fixed; width: 100%;}
 .fp-tableCell{display: table-cell; vertical-align: middle; width: 100%; height: 100%;}
 .fp-auto-height.fp-section,.fp-auto-height .fp-slide,.fp-auto-height .fp-tableCell{height: auto !important;}
 .fp-responsive .fp-auto-height-responsive.fp-section,.fp-responsive .fp-auto-height-responsive .fp-slide,.fp-responsive .fp-auto-height-responsive .fp-tableCell{height: auto !important;}
+
+#fp-nav{position: fixed; z-index: 100; margin-top: -32px; top: 50%; opacity: 1; -webkit-transform: translate3d(0,0,0);}
+#fp-nav.right{right: 17px;}
+#fp-nav ul{margin: 0; padding: 0;}
+#fp-nav ul li{display: block; width: 14px; height: 13px; margin: 7px; position:relative;}
+#fp-nav ul li a{display: block; position: relative; z-index: 1; width: 100%; height: 100%; cursor: pointer; text-decoration: none;}
+#fp-nav ul li a.active span,#fp-nav ul li:hover a.active span{height: 12px; width: 12px; margin: -6px 0 0 -6px; border-radius: 100%;}
+#fp-nav ul li a span{border-radius: 50%; position: absolute; z-index: 1; height: 4px; width: 4px; border: 0; background: #333; left: 50%; top: 50%; margin: -2px 0 0 -2px; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out;}
+#fp-nav ul li:hover a span{width: 10px; height: 10px; margin: -5px 0px 0px -5px;}
+
 
 @media all and (max-width:960px){
 	.m_show{display:block;}
@@ -144,7 +145,7 @@ label, input, select{vertical-align:middle;}
 	#container #intro .intro_txt h1{padding:10px 0 5px 0;}
 	#container #intro .intro_txt h1:after{width:50px; margin-left:-25px;}
 
-	#container #intro .scroll-btn{bottom:25px;}
+	#container #intro .scroll-btn{}
 	#container #intro .scroll-btn .mouse{width:30px; height:45px; margin: 0 auto 20px; border-width:2px;}
 	#container #intro .scroll-btn .mouse > *{width:4px; height:5px; margin:-4px 0 0 -2px;}
 	#container #intro .scroll-btn p{margin-left:-60px}
@@ -154,8 +155,7 @@ label, input, select{vertical-align:middle;}
 	/*#container #work .grid-sizer,#container #work .grid-item{width:25%;}*/
 
 	#container #work ul li{width:50%;}
-	#container #work ul li:last-child{padding-top:70px;}
-}
+	#container #work ul li:last-child{padding-top:70px;}}
 
 @media all and (max-width:736px){
 	#container #work .grid-sizer,#container #work .grid-item{width:33.333%;}
@@ -164,8 +164,7 @@ label, input, select{vertical-align:middle;}
 	#container #skills #skill .skill .chart canvas{width:110px; height:110px;}
 	#container #skills #skill .skill .chart .percent{line-height:110px;}
 
-	#container #work ul li:last-child{padding-top:30px;}
-}
+	#container #work ul li:last-child{padding-top:30px;}}
 
 @media all and (max-width:480px){
 	#container #intro .intro_txt h1 span{font-size:1.3rem; line-height:1.3rem;}
@@ -183,9 +182,5 @@ label, input, select{vertical-align:middle;}
 
 	#container #work ul li{width:100%; padding:30px 0;}
 	#container #work ul li img{display:none;}
-	/*
-	#container #work ul li a{display:inline-block; width:90%; margin:0 auto; position:relative;}
-	*/
 	#container #work ul li a{display:block; background:#333; padding:30px 0;}
-	#container #work ul li a span{text-shadow:2px 5px 0 rgba(255,255,255,0.2); color:#fff;}
-}
+	#container #work ul li a span{text-shadow:2px 5px 0 rgba(255,255,255,0.2); color:#fff;}}
