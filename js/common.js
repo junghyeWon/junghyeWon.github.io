@@ -1,7 +1,9 @@
 $(function(){
 	$('#container').fullpage({
 		scrollBar: true,
-		scrollOverflow: true
+		scrollOverflow: true,
+		navigation: true,
+		navigationPosition: 'right'
 	});
 
 	/*
@@ -41,7 +43,7 @@ $(function(){
 			var index=0;
 			$(document).scroll(function(){
 				var top = $('#skill').height()-$(window).scrollTop();
-				console.log(top);
+				//console.log(top);
 				if(top<-150){
 					if(index==0){
 						$('.chart').easyPieChart({
