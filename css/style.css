@@ -160,6 +160,8 @@ label, input, select{vertical-align:middle;}
 	#container #skills #skill .skill .chart canvas{width:110px; height:110px;}
 	#container #skills #skill .skill .chart .percent{line-height:110px;}
 
+	#container #work ul li{width:100%;}
+
 }
 
 @media all and (max-width:480px){
