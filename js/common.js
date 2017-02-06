@@ -4,6 +4,7 @@ $(function(){
 		scrollOverflow: true
 	});
 
+	/*
 	$('#filters a').on( 'click', function() {
 		var filterValue = $( this ).attr('data-filter');
 		$grid.isotope({ filter: filterValue });
@@ -32,6 +33,7 @@ $(function(){
 	$grid.imagesLoaded().progress(function() {
 		$grid.isotope('layout');
 	});
+	*/
 
 	function chart() {
 		// skills chart
