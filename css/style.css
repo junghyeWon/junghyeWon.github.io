@@ -9,17 +9,33 @@ label, input, select{vertical-align:middle;}
 #header{z-index:50}
 #header h1 a{display:inline-block; background:url('../images/logo.png') no-repeat 0 50%; background-size:23px 27px; padding-left:30px; color:#333;}
 
+#fp-nav{position: fixed; z-index: 100; top:20px; right:20px; opacity:1; -webkit-transform: translate3d(0,0,0); margin-top:0 !important;}
+#fp-nav ul{overflow:hidden;}
+#fp-nav ul li{float:left; margin-left:5px;}
+#fp-nav ul li a{display:block; width:50px; height:50px; background-color:#333; position:relative; transition:all .3s; -webkit-transition:all .3s; -moz-transition: all .3s; -ms-transition: all .3s; -o-transition: all .3s;}
+#fp-nav ul li a:after{content:''; width:100%; height:100%; position:absolute; top:0; left:0;}
+#fp-nav ul li a span{display:none; width:0; height:0; border-bottom:50px solid #ed6563; border-left:50px solid transparent;}
+#fp-nav ul li a.active span{display:block;}
+#fp-nav ul li:nth-of-type(1) a:after{background:url('../images/icon_home.png') no-repeat 50% 50%;}
+#fp-nav ul li:nth-of-type(1) a.active:after{background-image:url('../images/icon_home_on.png')}
+#fp-nav ul li:nth-of-type(2) a:after{background:url('../images/icon_skill.png') no-repeat 50% 50%;}
+#fp-nav ul li:nth-of-type(2) a.active:after{background-image:url('../images/icon_skill_on.png')}
+#fp-nav ul li:nth-of-type(3) a:after{background:url('../images/icon_work.png') no-repeat 50% 50%;}
+#fp-nav ul li:nth-of-type(3) a.active:after{background-image:url('../images/icon_work_on.png')}
+#fp-nav ul li:nth-of-type(4) a:after{background:url('../images/icon_contact.png') no-repeat 50% 50%;}
+#fp-nav ul li:nth-of-type(4) a.active:after{background-image:url('../images/icon_contact_on.png')}
+
 /* ========== 02. layout ========== */
 .m_show{display:none;}
 
-#header{width:100%; position:fixed; top:0; left:0; box-sizing:border-box; padding:20px;}
+#header{width:100%; position:fixed; top:0; left:0; box-sizing:border-box; padding:20px; padding-top:25px}
 #footer{width:100%; position:fixed; bottom:0; left:0; box-sizing:border-box; text-align:center; background:#333; padding:10px 0; color:#fff; font-family:'Poiret One', cursive}
 
 #container{width:100%;}
 #container #intro{text-align:center; position:relative;}
 #container #intro .intro_txt h1{display:inline-block; position:relative; padding:20px 0 10px 0;}
 #container #intro .intro_txt h1:after{content:''; position:absolute; top:0; left:50%; margin-left:-50px; width:100px; height:2px; background:#333;}
-#container #intro .intro_txt h1 span{font-family:'Cardo'; font-size:6rem; line-height:6rem; font-weight:700; color:#333; display:inline-block; animation-name:introTxt; animation-iteration-count:3; animation-duration:1.5s; -webkit-animation-name:introTxt; -webkit-animation-duration:1.5s; -moz-animation-name:introTxt; -moz-animation-duration:1.5s; transition:all .3s; -webkit-transition:all .3s; -moz-transition: all .3s; -ms-transition: all .3s; -o-transition: all .3s;}
+#container #intro .intro_txt h1 span{font-family:'Cardo'; font-size:6rem; line-height:6rem; font-weight:700; color:#333; display:inline-block; animation-name:introTxt; animation-iteration-count:2; animation-duration:1.5s; -webkit-animation-name:introTxt; -webkit-animation-duration:1.5s; -moz-animation-name:introTxt; -moz-animation-duration:1.5s; transition:all .3s; -webkit-transition:all .3s; -moz-transition: all .3s; -ms-transition: all .3s; -o-transition: all .3s;}
 #container #intro .intro_txt h1 span:nth-of-type(1){animation-delay:1s; -webkit-animation-delay:1s; -moz-animation-delay:1s;}
 #container #intro .intro_txt h1 span:nth-of-type(2){animation-delay:1.2s; -webkit-animation-delay:1.2s; -moz-animation-delay:1.2s;}
 #container #intro .intro_txt h1 span:nth-of-type(3){animation-delay:1.4s; -webkit-animation-delay:1.4s; -moz-animation-delay:1.4s;}
@@ -36,17 +52,20 @@ label, input, select{vertical-align:middle;}
 #container #intro .intro_txt div span{display:block; font-family:'Poiret One', cursive; font-size:1.0rem; animation:color 3s 0.5s infinite alternate; color:#cfcfcf}
 
 @keyframes introTxt{
-	0%{transform: rotateX(0deg);}
-	50%{transform: rotateX(180deg);}
-	100%{transform: rotateX(360deg);}}
+	0%{transform: rotateX(0deg); color:#333;}
+	50%{transform: rotateX(180deg); color:#ed6563;}
+	100%{transform: rotateX(360deg); color:#333;}
+}
 @-webkit-keyframes introTxt{
-	0%{transform: rotateX(0deg);}
-	50%{transform: rotateX(180deg);}
-	100%{transform: rotateX(360deg);}}
+	0%{transform: rotateX(0deg); color:#333;}
+	50%{transform: rotateX(180deg); color:#ed6563;}
+	100%{transform: rotateX(360deg); color:#333;}
+}
 @-moz-keyframes introTxt{
-	0%{transform: rotateX(0deg);}
-	50%{transform: rotateX(180deg);}
-	100%{transform: rotateX(360deg);}}
+	0%{transform: rotateX(0deg); color:#333;}
+	50%{transform: rotateX(180deg); color:#ed6563;}
+	100%{transform: rotateX(360deg); color:#333;}
+}
 
 @keyframes color{
 	from{color:#cfcfcf}
@@ -80,15 +99,7 @@ label, input, select{vertical-align:middle;}
 #container #intro .scroll-btn > *:hover,.scroll-btn > *:focus, .scroll-btn > *.active{color: #333;}
 #container #intro .scroll-btn > *:hover,.scroll-btn > *:focus,.scroll-btn > *:active,.scroll-btn > *.active{opacity: 0.8; filter: alpha(opacity=80);}
 #container #intro .scroll-btn .mouse{position: relative; display: block; width: 35px; height: 55px; margin: 0 auto 20px; box-sizing: border-box; border: 3px solid #333; border-radius: 23px;}
-#container #intro .scroll-btn .mouse > *{position: absolute; display: block; top: 29%; left: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; background: #333; border-radius: 50%; -webkit-animation: ani-mouse 2.5s linear infinite; -moz-animation: ani-mouse 2.5s linear infinite; animation: ani-mouse 2.5s linear infinite;}
-
-/*
-#container #work{position:relative; box-sizing:border-box; padding:100px 20px 0 20px}
-#container #work .grid-sizer,#container #work .grid-item{width:20%; box-sizing:border-box;}
-#container #work .grid-item a{display:block;}
-#container #work .grid-sizer a img,#container #work  .grid-item a img{width:100%;}
-#container #work .button-group{padding-bottom:20px;}
-*/
+#container #intro .scroll-btn .mouse > *{position: absolute; display: block; top: 29%; left: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; background: #ed6563; border-radius: 50%; -webkit-animation: ani-mouse 2.5s linear infinite; -moz-animation: ani-mouse 2.5s linear infinite; animation: ani-mouse 2.5s linear infinite;}
 
 #container #skills{}
 #container #skills #skill{font-size:0}
@@ -99,15 +110,6 @@ label, input, select{vertical-align:middle;}
 #container #skills #skill .skill .chart .percent{display: inline-block; color: #121d1f; z-index: 2; line-height: 152px; font-size: 21px; font-family:'Poiret One';}
 #container #skills #skill .skill .chart .percent:after{content: '%'; margin-left: 0.1em; font-size: .8em;}
 
-/*
-#container #work ul#filters{padding:0 0 20px 0; text-align:center;}
-#container #work ul#filters li{display:inline-block; }
-#container #work ul#filters li:after{content:"|"; padding:0 20px}
-#container #work ul#filters li:last-child:after{content:""}
-#container #work ul#filters a{color:#222; font-size:20px; font-family:'Cardo';}
-#container #work ul#filters a.current{color:#f18430;}
-*/
-
 #container #work{padding:0 50px; box-sizing:border-box;}
 #container #work ul{overflow:hidden;}
 #container #work ul li{float:left; width:33.333%; text-align:center;}
@@ -115,7 +117,7 @@ label, input, select{vertical-align:middle;}
 #container #work ul li a img{width:100%}
 #container #work ul li a span{color: #333; font-size:22px; font-family:'Cardo';}
 
-#container #contact{background:orange;}
+#container #contact{background:#ed6563;}
 
 /* ========== 04. fullpage ========== */
 .fp-section.fp-table, .fp-slide.fp-table{display: table; table-layout:fixed; width: 100%;}
@@ -123,22 +125,16 @@ label, input, select{vertical-align:middle;}
 .fp-auto-height.fp-section,.fp-auto-height .fp-slide,.fp-auto-height .fp-tableCell{height: auto !important;}
 .fp-responsive .fp-auto-height-responsive.fp-section,.fp-responsive .fp-auto-height-responsive .fp-slide,.fp-responsive .fp-auto-height-responsive .fp-tableCell{height: auto !important;}
 
-#fp-nav{position: fixed; z-index: 100; margin-top: -32px; top: 50%; opacity: 1; -webkit-transform: translate3d(0,0,0);}
-#fp-nav.right{right: 17px;}
-#fp-nav ul{margin: 0; padding: 0;}
-#fp-nav ul li{display: block; width: 14px; height: 13px; margin: 7px; position:relative;}
-#fp-nav ul li a{display: block; position: relative; z-index: 1; width: 100%; height: 100%; cursor: pointer; text-decoration: none;}
-#fp-nav ul li a.active span,#fp-nav ul li:hover a.active span{height: 12px; width: 12px; margin: -6px 0 0 -6px; border-radius: 100%;}
-#fp-nav ul li a span{border-radius: 50%; position: absolute; z-index: 1; height: 4px; width: 4px; border: 0; background: #333; left: 50%; top: 50%; margin: -2px 0 0 -2px; -webkit-transition: all 0.1s ease-in-out; -moz-transition: all 0.1s ease-in-out; -o-transition: all 0.1s ease-in-out; transition: all 0.1s ease-in-out;}
-#fp-nav ul li:hover a span{width: 10px; height: 10px; margin: -5px 0px 0px -5px;}
-
-
 @media all and (max-width:960px){
 	.m_show{display:block;}
 
-	#header{padding:10px 15px;}
-	#header h1 a{padding-left:20px; background-size:16px 20px; font-size:14px;}
-	#header .btn_nav{line-height:30px; width:22px; display:inline-block; top:10px; right:15px; background-size:16px 16px}
+	#header{padding-left:15px;}
+	#fp-nav ul li a{width:42px; height:42px;}
+	#fp-nav ul li a span{border-width:42px;}
+	#fp-nav ul li:nth-of-type(1) a:after{background-size:28px 24px;}
+	#fp-nav ul li:nth-of-type(2) a:after{background-size:28px 24px;}
+	#fp-nav ul li:nth-of-type(3) a:after{background-size:28px 24px;}
+	#fp-nav ul li:nth-of-type(4) a:after{background-size:28px 24px;}
 
 	#container #intro .intro_txt h1 span{font-size:3rem; line-height:3rem;}
 	#container #intro .intro_txt div span{font-size:0.5rem}
@@ -152,24 +148,27 @@ label, input, select{vertical-align:middle;}
 
 	#container #skills #skill .skill{width:50%}
 	#container #skills #skill .skill:nth-of-type(1),#container #skills #skill .skill:nth-of-type(2){margin-bottom:50px;}
-	/*#container #work .grid-sizer,#container #work .grid-item{width:25%;}*/
 
 	#container #work ul li{width:50%;}
 	#container #work ul li:last-child{padding-top:70px;}}
 
 @media all and (max-width:736px){
-	#container #work .grid-sizer,#container #work .grid-item{width:33.333%;}
+	#fp-nav ul li a{width:35px; height:35px;}
+	#fp-nav ul li a span{border-width:35px;}
+	#fp-nav ul li:nth-of-type(1) a:after{background-size:24px 20px;}
+	#fp-nav ul li:nth-of-type(2) a:after{background-size:24px 20px;}
+	#fp-nav ul li:nth-of-type(3) a:after{background-size:24px 20px;}
+	#fp-nav ul li:nth-of-type(4) a:after{background-size:24px 20px;}
+
+	#container #work ul li:last-child{padding-top:30px;}
 
 	#container #skills #skill .skill .chart{width:110px; height:110px;}
 	#container #skills #skill .skill .chart canvas{width:110px; height:110px;}
 	#container #skills #skill .skill .chart .percent{line-height:110px;}
 
-	#container #work ul li:last-child{padding-top:30px;}}
-
 @media all and (max-width:480px){
 	#container #intro .intro_txt h1 span{font-size:1.3rem; line-height:1.3rem;}
 	#container #intro .intro_txt h1:after{width:28px; margin-left:-14px; height:1px;}
-
 	#container #intro .scroll-btn .mouse{width:22px; height:35px; margin: 0 auto 20px;}
 	#container #intro .scroll-btn .mouse > *{width:2px; height:3px; margin:-2px 0 0 -1px;}
 	#container #intro .scroll-btn p{display:none;}
