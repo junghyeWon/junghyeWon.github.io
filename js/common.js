@@ -2,8 +2,9 @@ $(function(){
 	$('#container').fullpage({
 		scrollBar: true,
 		scrollOverflow: true,
-		navigation: true,
-		navigationPosition: 'right'
+		navigation: true
+		//navigationTooltips: ['Intro', 'Skills', 'Works', 'Cantact']
+		//navigationPosition: 'right'
 	});
 
 	/*
