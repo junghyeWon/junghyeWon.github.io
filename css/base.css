@@ -24,9 +24,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 
 /* base */
-body{font-size:13px; font-family:'Nanum Square', 'Nanum Gothic', "나눔고딕", Dotum, "돋움",Gulim, "굴림", Verdana, Tahoma, AppleGothic, sans-serif; color:#666; letter-spacing:0; text-align:left}
+body{font-size:13px; font-family:'Nanum Square', 'Nanum Gothic', "나눔고딕", Dotum, "돋움",Gulim, "굴림", Verdana, Tahoma, AppleGothic, sans-serif; color:#333; letter-spacing:0; text-align:left}
 table{border-collapse:collapse;}
-input,textarea,select{font-size:13px; color:#666; border:1px solid #b4b4b4; font-family:'Nanum Square', 'Nanum Gothic', "나눔고딕", "돋움",Gulim, "굴림", Verdana, Tahoma, AppleGothic, sans-serif; }
+input,textarea,select{font-size:13px; color:#333; border:1px solid #b4b4b4; font-family:'Nanum Square', 'Nanum Gothic', "나눔고딕", "돋움",Gulim, "굴림", Verdana, Tahoma, AppleGothic, sans-serif; }
 
 
 /* input_style css3 추가 */
@@ -42,7 +42,7 @@ legend, caption, .skip{visibility:hidden;overflow:hidden;width:0;height:0;font-s
 
 
 /* anchor */
-a { color:#666; text-decoration:none; font-family:'Nanum Square', 'Nanum Gothic', "나눔고딕" , Dotum, "돋움",Gulim, "굴림", Verdana, Tahoma, AppleGothic, sans-serif;}
+a { color:#333; text-decoration:none; font-family:'Nanum Square', 'Nanum Gothic', "나눔고딕" , Dotum, "돋움",Gulim, "굴림", Verdana, Tahoma, AppleGothic, sans-serif;}
 a:link, 
 a:visited { text-decoration:none}
 a:hover, 
@@ -87,7 +87,7 @@ a:focus { text-decoration:none; color:#000;}
 .c_b { clear:both}
 
 /* text */
-.bold { font-weight:bold; color:#666;}
+.bold { font-weight:bold; color:#333;}
 .underline { text-decoration:underline}
 
 /* background */
