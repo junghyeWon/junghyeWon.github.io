@@ -9,6 +9,8 @@ label, input, select{vertical-align:middle;}
 #header{z-index:50}
 #header h1 a{font-family:'Poiret One', cursive, Verdana, Tahoma, AppleGothic, sans-serif; display:inline-block; font-weight:700; font-size:28px; transition:all .5s; -webkit-transition:all .5s; -moz-transition: all .5s; -ms-transition: all .5s; -o-transition: all .5s;}
 
+#sub #header{background:#fff;}
+
 #fp-nav{position: fixed; z-index: 100; top:20px; right:20px; opacity:1; -webkit-transform: translate3d(0,0,0); margin-top:0 !important;}
 #fp-nav ul{overflow:hidden;}
 #fp-nav ul li{float:left; margin-left:5px;}
@@ -75,23 +77,27 @@ label, input, select{vertical-align:middle;}
 	to{color:#333}}
 @-moz-keyframes color{
 	from{color:#cfcfcf}
-	to{color:#333}}
+	to{color:#333}
+}
 
 @keyframes ani-mouse{
 	0%{opacity: 1; top: 29%;}
 	15%{opacity: 1; top: 50%;}
 	50%{opacity: 0; top: 50%;}
-	100%{opacity: 0; top: 29%;}}
+	100%{opacity: 0; top: 29%;}
+}
 @-webkit-keyframes ani-mouse{
 	0%{opacity: 1; top: 29%;}
 	15%{opacity: 1; top: 50%;}
 	50%{opacity: 0; top: 50%;}
-	100%{opacity: 0; top: 29%;}}
+	100%{opacity: 0; top: 29%;}
+}
 @-moz-keyframes ani-mouse{
 	0%{opacity: 1; top: 29%;}
 	15%{opacity: 1; top: 50%;}
 	50%{opacity: 0; top: 50%;}
-	100%{opacity: 0; top: 29%;}}
+	100%{opacity: 0; top: 29%;}
+}
 
 #container #intro .scroll-btn{display: block; position: absolute; left:0; bottom:70px; width:100%; text-align: center;}
 #container #intro .scroll-btn p{margin-left:-65px;}
@@ -100,7 +106,6 @@ label, input, select{vertical-align:middle;}
 #container #intro .scroll-btn .mouse{position: relative; display: block; width: 35px; height: 55px; margin: 0 auto 20px; box-sizing: border-box; border: 3px solid #333; border-radius: 23px;}
 #container #intro .scroll-btn .mouse > *{position: absolute; display: block; top: 29%; left: 50%; width: 8px; height: 8px; margin: -4px 0 0 -4px; background: #ed6563; border-radius: 50%; -webkit-animation: ani-mouse 2.5s linear infinite; -moz-animation: ani-mouse 2.5s linear infinite; animation: ani-mouse 2.5s linear infinite;}
 
-#container #skills{}
 #container #skills #skill{font-size:0}
 #container #skills #skill .skill{display:inline-block; text-align:center; width:25%}
 #container #skills #skill .skill h4{color: #333; font-size:22px; font-family:'Cardo', Verdana, Tahoma, AppleGothic, sans-serif;}
@@ -126,6 +131,14 @@ label, input, select{vertical-align:middle;}
 #container #contact dl:nth-of-type(even){background:#ed6563;}
 #container #contact dl:nth-of-type(even){color:#f2f2f2;}
 #container #contact dl:nth-of-type(even) dt:before{background-color:#f2f2f2;}
+
+#s_container .workList{box-sizing:border-box; padding:90px 0}
+#s_container .workList .grid-item{width:25%; }
+#s_container .workList .grid-item a{display:block; overflow:hidden; height:100%}
+#s_container .workList .grid-item a img{width:100%}
+#s_container .workList .grid-item a span{font-size:22px; opacity:0; display:block; position:absolute; bottom:0; left:0; width:100%; text-align:center; background:rgba(255,255,255,0.3); padding:15px 0; transition:all .5s; -webkit-transition:all .5s; -moz-transition: all .5s; -ms-transition: all .5s; -o-transition: all .5s;}
+#s_container .workList .grid-item a span strong{display:block; font-weight:700; padding-bottom:5px;}
+#s_container .workList .grid-item a:hover span{opacity:1;}
 
 /* ========== 04. fullpage ========== */
 .fp-section.fp-table, .fp-slide.fp-table{display: table; table-layout:fixed; width: 100%;}
@@ -167,6 +180,9 @@ label, input, select{vertical-align:middle;}
 
 	#container #work ul li{width:50%;}
 	#container #work ul li:last-child{padding-top:70px;}
+
+	#s_container .workList{padding:50px 0}
+	#s_container .workList .grid-item{width:33.333%}
 }
 
 @media all and (max-width:736px){
@@ -193,6 +209,8 @@ label, input, select{vertical-align:middle;}
 	#container #contact dl:nth-of-type(even){background:#ed6563;}
 	#container #contact dl:nth-of-type(even){color:#f2f2f2;}
 	#container #contact dl:nth-of-type(even) dt:before{background-color:#f2f2f2;}
+
+	#s_container .workList .grid-item{width:50%}
 }
 
 @media all and (max-width:480px){
@@ -215,4 +233,6 @@ label, input, select{vertical-align:middle;}
 
 	#container #contact dl dt{font-size:15px; padding-bottom:10px;}
 	#container #contact dl dd{font-size:13px;}
+
+	#s_container .workList .grid-item{width:100%}
 }
