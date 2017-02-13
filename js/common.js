@@ -3,40 +3,20 @@ $(function(){
 		scrollBar: true,
 		scrollOverflow: true,
 		navigation: true
-		//navigationTooltips: ['Intro', 'Skills', 'Works', 'Cantact']
-		//navigationPosition: 'right'
 	});
 
-	/*
-	$('#filters a').on( 'click', function() {
-		var filterValue = $( this ).attr('data-filter');
-		$grid.isotope({ filter: filterValue });
-		$grid.imagesLoaded().progress(function() {
-			$grid.isotope('layout');
-		});
-	});
-
-	$('.button-group').each( function( i, buttonGroup ) {
-		var $buttonGroup = $( buttonGroup );
-		$buttonGroup.on( 'click', 'a', function() {
-		$buttonGroup.find('.current').removeClass('current');
-		$( this ).addClass('current');
-		});
-	});
-
-	var $grid = $('.grid').isotope({
+	var $grid = $('.workList').isotope({
 		temSelector: '.grid-item',
 		percentPosition: true,
 		catecory02Duration:"0.6s",
 		layoutMode: 'masonry'
 	});
 
-	$grid.isotope('shuffle');
+	//$grid.isotope('shuffle');
 	// layout Masonry after each image loads
 	$grid.imagesLoaded().progress(function() {
 		$grid.isotope('layout');
 	});
-	*/
 
 	function chart() {
 		// skills chart
