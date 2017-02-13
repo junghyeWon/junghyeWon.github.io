@@ -5,19 +5,6 @@ $(function(){
 		navigation: true
 	});
 
-	var $grid = $('.workList').isotope({
-		temSelector: '.grid-item',
-		percentPosition: true,
-		catecory02Duration:"0.6s",
-		layoutMode: 'masonry'
-	});
-
-	//$grid.isotope('shuffle');
-	// layout Masonry after each image loads
-	$grid.imagesLoaded().progress(function() {
-		$grid.isotope('layout');
-	});
-
 	function chart() {
 		// skills chart
 		$(document).ready(function(e) {
