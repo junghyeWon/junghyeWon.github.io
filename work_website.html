@@ -18,6 +18,22 @@
 	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/imagesloaded.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/common.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			var $grid = $('.workList').isotope({
+				temSelector: '.grid-item',
+				percentPosition: true,
+				catecory02Duration:"0.6s",
+				layoutMode: 'masonry'
+			});
+
+			//$grid.isotope('shuffle');
+			// layout Masonry after each image loads
+			$grid.imagesLoaded().progress(function() {
+				$grid.isotope('layout');
+			});
+		})
+	</script>
 </head>
 
 <body id="sub">
