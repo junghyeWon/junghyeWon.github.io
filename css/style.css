@@ -5,6 +5,8 @@ label, input, select{vertical-align:middle;}
 
 /*body{overflow-x:hidden !important;}*/
 
+#wrap{position:relative;}
+
 /* ========== 01. header ========== */
 #header{z-index:50}
 #header h1 a{font-family:'Poiret One', cursive, Verdana, Tahoma, AppleGothic, sans-serif; display:inline-block; font-weight:700; font-size:28px; transition:all .5s; -webkit-transition:all .5s; -moz-transition: all .5s; -ms-transition: all .5s; -o-transition: all .5s;}
@@ -31,7 +33,7 @@ label, input, select{vertical-align:middle;}
 .m_show{display:none;}
 
 #header{width:100%; position:fixed; top:0; left:0; box-sizing:border-box; padding:20px; padding-top:25px}
-#footer{width:100%; position:fixed; bottom:0; left:0; box-sizing:border-box; text-align:center; background:#333; padding:10px 0; color:#fff; font-family:'Poiret One', cursive}
+#footer{width:100%; position:fixed; bottom:0; left:0; box-sizing:border-box; text-align:center; background:#333; padding:10px 0; color:#fff; font-family:'Poiret One', cursive; z-index:300}
 
 #container{width:100%;}
 #container #intro{text-align:center; position:relative;}
@@ -133,12 +135,29 @@ label, input, select{vertical-align:middle;}
 #container #contact dl:nth-of-type(even) dt:before{background-color:#f2f2f2;}
 
 #s_container .workList{box-sizing:border-box; padding:90px 0}
-#s_container .workList .grid-item{width:25%; }
+#s_container .workList .grid-item{width:20%; }
 #s_container .workList .grid-item a{display:block; overflow:hidden; height:100%}
 #s_container .workList .grid-item a img{width:100%}
 #s_container .workList .grid-item a span{font-size:22px; opacity:0; display:block; position:absolute; bottom:0; left:0; width:100%; text-align:center; background:rgba(255,255,255,0.3); padding:15px 0; transition:all .5s; -webkit-transition:all .5s; -moz-transition: all .5s; -ms-transition: all .5s; -o-transition: all .5s;}
 #s_container .workList .grid-item a span strong{display:block; font-weight:700; padding-bottom:5px;}
 #s_container .workList .grid-item a:hover span{opacity:1;}
+
+
+.work_list{position:fixed; top:0; left:100%; height:100%; z-index:200; display:table; box-shadow:-15px 0 18px -1px rgba(0,0,0,0.2)}
+.work_list div{display:table-cell; vertical-align:middle; padding:0 40px}
+.work_list div p{border:1px solid red; }
+.work_list div ul{display:none;}
+.work_list div ul li{display:inline-block; padding:5px 0; margin:0 3px}
+.work_list div ul li a{font-size:14px; color:#fff; display:block; background:#333; padding:5px 15px; border-radius:10px; transition:all .5s; -webkit-transition:all .5s; -moz-transition: all .5s; -ms-transition: all .5s; -o-transition: all .5s;}
+.work_list div ul li a:hover{background-color:#ed6563}
+/*
+#container .work_list div{width:80%; margin:0 auto; background:#fff;}
+#container .work_list div ul{overflow:hidden;}
+#container .work_list div ul li{float:left; width:50%; line-height:24px; box-sizing:border-box;}
+#container .work_list div ul li a{font-size:16px;}
+#container .work_list div ul li a:before{content:'-'; padding-right:5px;}
+#container .work_list div > a{}
+*/
 
 /* ========== 04. fullpage ========== */
 .fp-section.fp-table, .fp-slide.fp-table{display: table; table-layout:fixed; width: 100%;}
@@ -150,6 +169,8 @@ label, input, select{vertical-align:middle;}
 	#container #contact dl{padding:60px 30px; width:50%}
 	#container #contact dl:nth-of-type(1),#container #contact dl:nth-of-type(4){background-color:#f2f2f2; color:#333;}
 	#container #contact dl:nth-of-type(2),#container #contact dl:nth-of-type(3){background-color:#ed6563; color:#f2f2f2}
+
+	#s_container .workList .grid-item{width:25%; }
 }
 
 @media all and (max-width:960px){
