@@ -18,6 +18,8 @@ $(function(){
 		});
 
 		$("#work li a").click(function(e){
+			$(".close").fadeIn();
+
 			e.preventDefault();
 			var viewList = $(this).attr('date-list');
 			$('.work_list div ul').hide();
@@ -27,8 +29,20 @@ $(function(){
 			$('.work_list').stop().animate({'left':win_w/2});
 		})
 		
+		/*
 		$(".work_list div > a").click(function(e){
 			e.preventDefault();
+			$('#wrap').stop().animate({'left':0});
+			$('.work_list').stop().animate({'left':win_w},function(){
+				$('.work_list div ul').hide();
+				$('.work_list').removeClass('on');
+			});
+		})
+		*/
+		$(".close").click(function(e){
+			e.preventDefault();
+			$(".close").fadeOut();
+
 			$('#wrap').stop().animate({'left':0});
 			$('.work_list').stop().animate({'left':win_w},function(){
 				$('.work_list div ul').hide();
