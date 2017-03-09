@@ -143,7 +143,7 @@ label, input, select{vertical-align:middle;}
 #s_container .workList .grid-item a:hover span{opacity:1;}
 
 
-.work_list{position:fixed; top:0; left:100%; height:100%; z-index:200; display:table;}
+.work_list{position:fixed; top:0; left:100%; height:100%; z-index:200; display:table; background:#fff;}
 .work_list.on{box-shadow:-15px 0 18px -1px rgba(0,0,0,0.2)}
 .work_list div{display:table-cell; vertical-align:middle; padding:0 40px}
 .work_list div ul{display:none;}
@@ -153,10 +153,12 @@ label, input, select{vertical-align:middle;}
 .work_list div ul li a:link:after,.work_list div ul li a:visited:after{content: ""; position: absolute; background: none repeat scroll 0 0 #ed6563; height: 0%; left: 50%; top: 50%; width: 100%; z-index: -1; -webkit-transition: all .3s ease 0s; -moz-transition: all .3s ease 0s; -o-transition: all .3s ease 0s; transition: all .3s ease 0s;}
 .work_list div ul li a:link:hover:after, .work_list div ul li a:visited:hover:after {height: 420%;}
 .work_list div ul li a:after {-moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg); -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg); -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg); transform: translateX(-50%) translateY(-50%) rotate(-45deg);}
-.work_list div > a{width:20px; height:20px; display:block; background:url('../images/btn_close.png') no-repeat 0 0; text-indent:-999999px;}
+/* .work_list div > a{position:absolute; top:0; left:0; width:30px; height:100%; background:#333;} */
 .work_list div .work_infoTxt{display:none;}
 .work_list div .work_infoTxt span{display:block; font-size:15px; line-height:20px; padding-bottom:20px}
 .work_list div .work_infoTxt a{display:inline-block; background:#333; color:#fff; padding:10px 30px; font-size:15px;}
+
+.close{background:rgba(0,0,0,0.5); width:100%; height:100%; position:fixed; top:0; left:0; display:none; z-index:50; text-indent:-9999999px;}
 
 
 /*
@@ -262,10 +264,16 @@ label, input, select{vertical-align:middle;}
 	#container #skills #skill .skill .chart .percent{line-height:72px; font-size:15px;}
 	#container #skills #skill .skill h4{font-size:16px;}
 
+	#container #work ul li{width:100%; padding:15px 0 !important}
+	#container #work ul li a{display:table; width:100%}
+	#container #work ul li a img{display:table-cell; width:75%; vertical-align:middle;}
+	#container #work ul li a span{display:table-cell; width:25%; vertical-align:middle; padding:0; text-align:left;}
+	/* 
 	#container #work ul li{width:100%; padding:30px 0;}
 	#container #work ul li img{display:none;}
 	#container #work ul li a{display:block; background:#333; padding:30px 0;}
 	#container #work ul li a span{text-shadow:2px 5px 0 rgba(255,255,255,0.2); color:#fff; padding-top:0;}
+	*/
 
 	#container #contact dl dt{font-size:15px; padding-bottom:10px;}
 	#container #contact dl dd{font-size:13px;}
