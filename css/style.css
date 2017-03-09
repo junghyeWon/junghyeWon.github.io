@@ -146,11 +146,19 @@ label, input, select{vertical-align:middle;}
 .work_list{position:fixed; top:0; left:100%; height:100%; z-index:200; display:table;}
 .work_list.on{box-shadow:-15px 0 18px -1px rgba(0,0,0,0.2)}
 .work_list div{display:table-cell; vertical-align:middle; padding:0 40px}
-.work_list div p{border:1px solid red; }
 .work_list div ul{display:none;}
 .work_list div ul li{display:inline-block; padding:5px 0; margin:0 3px}
-.work_list div ul li a{font-size:14px; color:#fff; display:block; background:#333; padding:5px 15px; border-radius:10px; transition:all .5s; -webkit-transition:all .5s; -moz-transition: all .5s; -ms-transition: all .5s; -o-transition: all .5s;}
-.work_list div ul li a:hover{background-color:#ed6563}
+.work_list div ul li a{z-index:1;}
+.work_list div ul li a:link,.work_list div ul li a:visited{font-size:14px; position: relative; display:block; padding:5px 15px; border-radius:10px; background:#333; color: #fff; text-align: center; text-decoration: none; text-transform: uppercase; overflow: hidden; letter-spacing: .08em; -webkit-transition: all .3s ease; -moz-transition: all .3s ease; -o-transition: all .3s ease; transition: all .3s ease;}
+.work_list div ul li a:link:after,.work_list div ul li a:visited:after{content: ""; position: absolute; background: none repeat scroll 0 0 #ed6563; height: 0%; left: 50%; top: 50%; width: 100%; z-index: -1; -webkit-transition: all .3s ease 0s; -moz-transition: all .3s ease 0s; -o-transition: all .3s ease 0s; transition: all .3s ease 0s;}
+.work_list div ul li a:link:hover:after, .work_list div ul li a:visited:hover:after {height: 420%;}
+.work_list div ul li a:after {-moz-transform: translateX(-50%) translateY(-50%) rotate(-45deg); -ms-transform: translateX(-50%) translateY(-50%) rotate(-45deg); -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg); transform: translateX(-50%) translateY(-50%) rotate(-45deg);}
+.work_list div > a{width:20px; height:20px; display:block; background:url('../images/btn_close.png') no-repeat 0 0; text-indent:-999999px;}
+.work_list div .work_infoTxt{display:none;}
+.work_list div .work_infoTxt span{display:block; font-size:15px; line-height:20px; padding-bottom:20px}
+.work_list div .work_infoTxt a{display:inline-block; background:#333; color:#fff; padding:10px 30px; font-size:15px;}
+
+
 /*
 #container .work_list div{width:80%; margin:0 auto; background:#fff;}
 #container .work_list div ul{overflow:hidden;}
@@ -203,8 +211,11 @@ label, input, select{vertical-align:middle;}
 	#container #work ul li{width:50%;}
 	#container #work ul li:last-child{padding-top:70px;}
 
-	#s_container .workList{padding:50px 0}
-	#s_container .workList .grid-item{width:33.333%}
+	/* #s_container .workList{padding:50px 0}
+	#s_container .workList .grid-item{width:33.333%} */
+
+	.work_list div ul li{padding:3px 0; margin:0 3px}
+	.work_list div ul li a:link,.work_list div ul li a:visited{font-size:12px; padding:5px 10px;}
 }
 
 @media all and (max-width:736px){
@@ -232,7 +243,10 @@ label, input, select{vertical-align:middle;}
 	#container #contact dl:nth-of-type(even){color:#f2f2f2;}
 	#container #contact dl:nth-of-type(even) dt:before{background-color:#f2f2f2;}
 
-	#s_container .workList .grid-item{width:50%}
+	/* #s_container .workList .grid-item{width:50%} */
+
+	.work_list div ul{display:none !important;}
+	.work_list div .work_infoTxt{display:block;}
 }
 
 @media all and (max-width:480px){
@@ -256,5 +270,5 @@ label, input, select{vertical-align:middle;}
 	#container #contact dl dt{font-size:15px; padding-bottom:10px;}
 	#container #contact dl dd{font-size:13px;}
 
-	#s_container .workList .grid-item{width:100%}
+	/* #s_container .workList .grid-item{width:100%} */
 }
