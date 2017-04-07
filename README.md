@@ -1,10 +1,9 @@
-# junghyeWon.github.io
+# http://junghyeWon.github.io
+======================
 
-## WEB PUBLISHER
-
-### 원정혜 91.01.28
-
-5년차 웹퍼블리셔 :)
+# WEB PUBLISHER
+## 원정혜 91.01.28
+### 5년차 웹퍼블리셔 :)
 
 1. 꼼꼼하다.
 
