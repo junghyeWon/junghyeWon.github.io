@@ -11,6 +11,7 @@ $(function(){
 		var win_w = $(window).width();
 
 		$('.work_list').css({'width':($(window).width())/2})
+		$(".close").stop().fadeOut();
 		$('#wrap').stop().animate({'left':0});
 		$('.work_list').stop().animate({'left':win_w},function(){
 			$('.work_list div ul').hide();
@@ -18,7 +19,7 @@ $(function(){
 		});
 
 		$("#work li a").click(function(e){
-			$(".close").fadeIn();
+			$(".close").stop().fadeIn();
 
 			e.preventDefault();
 			var viewList = $(this).attr('date-list');
@@ -41,7 +42,7 @@ $(function(){
 		*/
 		$(".close").click(function(e){
 			e.preventDefault();
-			$(".close").fadeOut();
+			$(".close").stop().fadeOut();
 
 			$('#wrap').stop().animate({'left':0});
 			$('.work_list').stop().animate({'left':win_w},function(){
@@ -63,7 +64,8 @@ function chart() {
 			if(top<-150){
 				if(index==0){
 					$('.chart').easyPieChart({
-						barColor: '#ed6563',
+						//barColor: '#ed6563',
+						barColor: '#fe5548',
 						trackColor: '#f0f0f0',
 						lineWidth: 8,
 						animate: 1500,
