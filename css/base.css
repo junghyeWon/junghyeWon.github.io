@@ -24,9 +24,9 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 
 /* base */
-body{font-size:13px; font-family:'Nanum Square', 'Nanum Gothic', "나눔고딕", Dotum, "돋움",Gulim, "굴림", Verdana, Tahoma, AppleGothic, sans-serif; color:#333; letter-spacing:0; text-align:left}
+body{font-size:13px; font-family:'Nanum Square', Dotum, "돋움",Gulim, "굴림", Verdana, Tahoma, AppleGothic, sans-serif; color:#333; letter-spacing:0; text-align:left}
 table{border-collapse:collapse;}
-input,textarea,select{font-size:13px; color:#333; border:1px solid #b4b4b4; font-family:'Nanum Square', 'Nanum Gothic', "나눔고딕", "돋움",Gulim, "굴림", Verdana, Tahoma, AppleGothic, sans-serif; }
+input,textarea,select{font-size:13px; color:#333; border:1px solid #b4b4b4; font-family:'Nanum Square', "돋움",Gulim, "굴림", Verdana, Tahoma, AppleGothic, sans-serif; box-sizing:border-box;}
 
 
 /* input_style css3 추가 */
@@ -42,7 +42,7 @@ legend, caption, .skip{visibility:hidden;overflow:hidden;width:0;height:0;font-s
 
 
 /* anchor */
-a { color:#333; text-decoration:none; font-family:'Nanum Square', 'Nanum Gothic', "나눔고딕" , Dotum, "돋움",Gulim, "굴림", Verdana, Tahoma, AppleGothic, sans-serif;}
+a { color:#333; text-decoration:none; font-family:'Nanum Square', Dotum, "돋움",Gulim, "굴림", Verdana, Tahoma, AppleGothic, sans-serif;}
 a:link, 
 a:visited { text-decoration:none}
 a:hover, 
@@ -61,14 +61,6 @@ a:focus { text-decoration:none; color:#000;}
 #skipNavi{position:relative; width:100%; margin:0 auto;}
 #skipNavi a{display:block; position:absolute; left:0; top:0; z-index:50; width:0; height:0; font-size:0; overflow:hidden;}
 #skipNavi a:active, #skipNavi a:focus{width:100%; height:auto; background:#000; color:#fff; font-size:1em; text-align:center; padding:5px 0;} 
-
-/* 모바일 일때 skipNavi */
-/*
-#skipNavi{}
-#skipNavi a {display: block; font-size:13px; height:20px; left:0; position: absolute; text-align: center; top: -10000px; z-index:5000;}
-#skipNavi a:focus, #skipNavi a:active {background-color: #2f7bb6;color: #ffffff;font-weight: bold;padding:10px 50px;position: absolute;top: 0;}
-*/
-
 
 /*text_align*/
 .t_l { text-align:left !important;}
@@ -137,72 +129,52 @@ a:focus { text-decoration:none; color:#000;}
 /*! 화면에서는 안 보이지만, 레이아웃 공간 적용 */
 .invisible {visibility: hidden; }
 
-/* 
- * Nanum Gothic (Korean) http://www.google.com/webfonts/earlyaccess
- */
 
 @font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 300;
-  src: url(font/NanumGothic-Light.eot);
-  src: url(font/NanumGothic-Light.eot?#iefix) format('embedded-opentype'),
-       url(font/NanumGothic-Light.woff) format('woff'),
-       url(font/NanumGothic-Light.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 400;
-  src: url(font/NanumGothic-Regular.eot);
-  src: url(font/NanumGothic-Regular.eot?#iefix) format('embedded-opentype'),
-       url(font/NanumGothic-Regular.woff) format('woff'),
-       url(font/NanumGothic-Regular.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 700;
-  src: url(font/NanumGothic-Bold.eot);
-  src: url(font/NanumGothic-Bold.eot?#iefix) format('embedded-opentype'),
-       url(font/NanumGothic-Bold.woff) format('woff'),
-       url(font/NanumGothic-Bold.ttf) format('truetype');
-}
-
-@font-face {
-  font-family: 'Nanum Gothic';
-  font-style: normal;
-  font-weight: 800;
-  src: url(font/NanumGothic-ExtraBold.eot);
-  src: url(font/NanumGothic-ExtraBold.eot?#iefix) format('embedded-opentype'),
-       url(font/NanumGothic-ExtraBold.woff) format('woff'),
-       url(font/NanumGothic-ExtraBold.ttf) format('truetype');
+  font-family: 'Nanum Square';
+  src: url('font/NanumSquareL.eot'); /* IE9 Compat Modes */
+  src: url('font/NanumSquareL.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/NanumSquareL.woff') format('woff'), /* Modern Browsers */
+       url('font/NanumSquareL.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('font/NanumSquareOTFLight.svg#017f9c78318bcde3d1dc4451e8eaca0a') format('svg'); /* Legacy iOS */
+       
+  font-style:normal;
+  font-weight:300;
 }
 
 @font-face {
   font-family: 'Nanum Square';
-  font-style: normal;
-  font-weight: 400;
-  src: url(font/NanumSquareR.eot);
-  src: local('Nanum Square Regular'),
-       local('NanumSquareR'),
-       url(font/NanumSquareR.eot?#iefix) format('embedded-opentype'),
-       url(font/NanumSquareR.woff2) format('woff2'),
-       url(font/NanumSquareR.woff) format('woff'),
-       url(font/NanumSquareR.ttf) format('truetype');
+  src: url('font/NanumSquareR.eot'); /* IE9 Compat Modes */
+  src: url('font/NanumSquareR.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/NanumSquareR.woff') format('woff'), /* Modern Browsers */
+       url('font/NanumSquareR.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('font/NanumSquareOTFR.svg#9e23ceb0c858ca37642ba540402577eb') format('svg'); /* Legacy iOS */
+       
+  font-style:normal;
+  font-weight:400;
 }
 
 @font-face {
   font-family: 'Nanum Square';
-  font-style: bold;
-  font-weight: 700;
-  src: url(font/NanumSquareB.eot);
-  src: local('Nanum Square Bold'),
-       local('NanumSquareB'),
-       url(font/NanumSquareB.eot?#iefix) format('embedded-opentype'),
-       url(font/NanumSquareB.woff2) format('woff2'),
-       url(font/NanumSquareB.woff) format('woff'),
-       url(font/NanumSquareB.ttf) format('truetype');
+  src: url('font/NanumSquareB.eot'); /* IE9 Compat Modes */
+  src: url('font/NanumSquareB.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/NanumSquareB.woff') format('woff'), /* Modern Browsers */
+       url('font/NanumSquareB.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('font/NanumSquareOTFB.svg#a41a1fda1fdf3dafd3394867a156b1cf') format('svg'); /* Legacy iOS */
+       
+  font-style:normal;
+  font-weight:700;
 }
+
+@font-face {
+  font-family: 'Nanum Square';
+  src: url('font/NanumSquareEB.eot'); /* IE9 Compat Modes */
+  src: url('font/NanumSquareEB.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('font/NanumSquareEB.woff') format('woff'), /* Modern Browsers */
+       url('font/NanumSquareEB.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('font/NanumSquareOTFExtraBold.svg#090d6763bc81b49309446d23fbd10e87') format('svg'); /* Legacy iOS */
+       
+  font-style:normal;
+  font-weight:900;
+}
+
