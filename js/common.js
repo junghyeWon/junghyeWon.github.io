@@ -6,13 +6,21 @@ $(function(){
 		afterLoad: function(anchorLink, index){
 			if(index == 1){
 				$('#fp-nav,#footer').hide();
+			}else if(index== 2){
+				$('.chart').easyPieChart({
+					barColor: '#fe5548',
+					trackColor: '#f0f0f0',
+					lineWidth: 8,
+					animate: 1500,
+					onStep: function(from, to, percent) {
+						$(this.el).find('.percent').text(Math.round(percent));
+					}
+				});
 			}else{
 				$('#fp-nav,#footer').fadeIn();
 			}
 		}
 	});
-
-	chart();
 
 	$(window).resize(function(){
 		var win_w = $(window).width();
@@ -26,9 +34,11 @@ $(function(){
 		});
 
 		$("#work li a").click(function(e){
-			$(".close").stop().fadeIn();
-
 			e.preventDefault();
+
+			$(".close").stop().fadeIn();
+			$(this).addClass('on');
+
 			var viewList = $(this).attr('date-list');
 			$('.work_list div ul').hide();
 			$('.work_list').addClass('on');
@@ -40,6 +50,7 @@ $(function(){
 		$(".close").click(function(e){
 			e.preventDefault();
 			$(".close").stop().fadeOut();
+			$("#work li a").removeClass('on');
 
 			$('#wrap').stop().animate({'left':0});
 			$('.work_list').stop().animate({'left':win_w},function(){
@@ -49,30 +60,3 @@ $(function(){
 		})
 	}).resize()
 })
-
-
-function chart() {
-	// skills chart
-	$(document).ready(function(e) {
-		var index=0;
-		$(document).scroll(function(){
-			var top = $('#skill').height()-$(window).scrollTop();
-			//console.log(top);
-			if(top<-150){
-				if(index==0){
-					$('.chart').easyPieChart({
-						//barColor: '#ed6563',
-						barColor: '#fe5548',
-						trackColor: '#f0f0f0',
-						lineWidth: 8,
-						animate: 1500,
-						onStep: function(from, to, percent) {
-							$(this.el).find('.percent').text(Math.round(percent));
-						}
-					});
-				}
-				index++;
-			}
-		})
-	});
-}
