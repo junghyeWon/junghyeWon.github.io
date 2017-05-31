@@ -46,8 +46,7 @@ $(function(){
 			$('.work_list div').find('.'+viewList).show()
 			$('.work_list').stop().animate({'left':win_w/2});
 		})
-		$(".empty").click(function(e){
-			e.preventDefault();
+		$(".empty").click(function(){
 			$(".empty").stop().fadeOut();
 			$("#work li a").removeClass('on');
 			$('#wrap').stop().animate({'left':0});
